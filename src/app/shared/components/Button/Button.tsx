@@ -1,5 +1,5 @@
 import { VariantProps, cva } from 'class-variance-authority';
-import { ButtonHTMLAttributes, FC } from 'react';
+import { ButtonHTMLAttributes} from 'react';
 import cn from 'src/app/shared/utils/mergeClasses';
 
 const buttonVariants = cva('', {
@@ -19,7 +19,7 @@ interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {}
 
-const Button: FC<ButtonProps> = ({ className, variant, ...others }) => {
+const Button = ({ className, variant, ...others }: ButtonProps) => {
   return (
     <button className={cn(buttonVariants({ variant, className }))} {...others}>
       Button
