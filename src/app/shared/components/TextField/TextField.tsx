@@ -6,7 +6,7 @@ const textFieldVariants = cva('', {
   variants: {
     variant: {
       default:
-        'block w-full border-b-2 border-violet-700 py-1.5 pl-2 rounded text-violet-800 ring-1 ring-inset ring-violet-700 placeholder:text-violet-700 focus:outline-none focus:border-b-2 focus:border-purple-500 font-inter',
+        'block w-full border-b-2 border-violet-700 py-1.5 pl-2 rounded text-violet-800 placeholder:text-violet-700 focus:outline-none focus:border-b-2 focus:border-purple-500 font-inter',
       hover: 'hover:bg-[purple-500]',
       active: 'active:bg-purple-500',
       focus:
@@ -31,14 +31,15 @@ const TextField = ({
   ...others
 }: TextFieldProps) => {
   return (
-    <div>
+    <div className='border-[0.5px] border-violet-600 rounded'>
       <div className="relative">
         {icon && icon}
-
-        <input
-          className={cn(textFieldVariants({ variant, className }))}
-          {...others}
-        />
+        <div>
+          <input
+            className={cn(textFieldVariants({ variant, className }))}
+            {...others}
+          />
+        </div>
         {postIcon && postIcon}
       </div>
     </div>

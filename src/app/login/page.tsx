@@ -19,31 +19,35 @@ const page = () => {
             <h1 className="text-xl 2xl:text-2xl font-semibold">Login</h1>
             <p className="text-violet-800 text-sm ">to get started</p>
           </div>
-          <TextField
-            variant="default"
-            placeholder="someone@example.com"
-            className="pl-[30px] mb-2 text-sm "
-            icon={
-              <i className="absolute bottom-[6px] pl-2">
-                <EmailOutlinedIcon className="text-violet-700 text-[16px]" />
-              </i>
-            }
-          />
-          <TextField
-            variant="default"
-            placeholder="password"
-            className="pl-[30px] mb-2 text-sm"
-            icon={
-              <i className="absolute bottom-[6px] pl-2">
-                <HttpsOutlinedIcon className="text-violet-700 text-[16px]" />
-              </i>
-            }
-            postIcon={
-              <i className="absolute right-[6px] bottom-[6px] pl-2 cursor-pointer">
-                <RemoveRedEyeOutlinedIcon className="text-violet-700 text-[16px]" />
-              </i>
-            }
-          />
+          <div className="mb-2">
+            <TextField
+              variant="default"
+              placeholder="someone@example.com"
+              className="pl-[30px] text-sm "
+              icon={
+                <i className="absolute bottom-[6px] pl-2">
+                  <EmailOutlinedIcon className="text-violet-700 text-[16px]" />
+                </i>
+              }
+            />
+          </div>
+          <div className="mb-2">
+            <TextField
+              variant="default"
+              placeholder="password"
+              className="pl-[30px] text-sm"
+              icon={
+                <i className="absolute bottom-[6px] pl-2">
+                  <HttpsOutlinedIcon className="text-violet-700 text-[16px]" />
+                </i>
+              }
+              postIcon={
+                <i className="absolute right-[6px] bottom-[6px] pl-2 cursor-pointer">
+                  <RemoveRedEyeOutlinedIcon className="text-violet-700 text-[16px]" />
+                </i>
+              }
+            />
+          </div>
           <span className="text-purple-500 font-inter text-xs font-medium mb-4 block cursor-pointer">
             Forgot Password?
           </span>
