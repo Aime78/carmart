@@ -2,7 +2,11 @@ interface AuthLayoutProps {
   children: React.ReactElement;
 }
 const AuthLayout = ({ children }: AuthLayoutProps) => {
-  return <div className="bg-violet-500 md:h-screen flex justify-center items-center font-work-sans">{children}</div>;
+  return (
+    <div className="md:bg-violet-500 md:h-screen md:flex md:justify-center md:items-center font-work-sans">
+      {children}
+    </div>
+  );
 };
 
 export default AuthLayout;
