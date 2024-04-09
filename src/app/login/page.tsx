@@ -8,11 +8,16 @@ import AuthLayout from '@/shared/layout/AuthLayout/AuthLayout';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import HttpsOutlinedIcon from '@mui/icons-material/HttpsOutlined';
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
+import Head from 'next/head';
 import Image from 'next/image';
+
 const page = () => {
   return (
     <AuthLayout>
       <AuthModal>
+        <Head>
+          <title>Login</title>
+        </Head>
         <Image src={logo} alt="logo" className="mb-6" />
         <div className="min-w-[300px]">
           <div className="mb-4">
@@ -48,7 +53,7 @@ const page = () => {
               }
             />
           </div>
-          <span className="text-purple-500 font-inter text-xs font-medium mb-4 block cursor-pointer">
+          <span className="text-purple-500 font-inter text-xs font-medium mb-6 block cursor-pointer">
             Forgot Password?
           </span>
 
