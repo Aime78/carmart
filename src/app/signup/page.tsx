@@ -2,50 +2,52 @@ import Google from '@/shared/assets/icons/google.svg';
 import logo from '@/shared/assets/icons/logo.svg';
 import AuthModal from '@/shared/components/AuthModal/AuthModal';
 import { Button } from '@/shared/components/Button';
-import Checkbox from '@/shared/components/Checkbox/Checkbox';
 import TextField from '@/shared/components/TextField/TextField';
 import AuthLayout from '@/shared/layout/AuthLayout/AuthLayout';
-import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
-import HttpsOutlinedIcon from '@mui/icons-material/HttpsOutlined';
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import Head from 'next/head';
 import Image from 'next/image';
 
-const Login = () => {
+const Signup = () => {
   return (
+
     <AuthLayout>
       <AuthModal>
         <Head>
-          <title>Login</title>
+          <title>Sign up</title>
         </Head>
         <Image src={logo} alt="logo" className="mb-6" />
         <div className="min-w-[300px]">
           <div className="mb-4">
-            <h1 className="text-xl 2xl:text-2xl font-semibold">Login</h1>
+            <h1 className="text-xl 2xl:text-2xl font-semibold">Sign up</h1>
             <p className="text-violet-800 text-sm ">to get started</p>
           </div>
           <div className="mb-2">
             <TextField
               variant="default"
-              placeholder="someone@example.com"
-              className="pl-[30px] text-sm "
-              icon={
-                <i className="absolute bottom-[6px] pl-2">
-                  <EmailOutlinedIcon className="text-violet-700 text-[16px]" />
-                </i>
-              }
+              placeholder="First Name"
+              className="pl-[8px] text-sm "
             />
           </div>
           <div className="mb-2">
             <TextField
               variant="default"
-              placeholder="password"
-              className="pl-[30px] text-sm"
-              icon={
-                <i className="absolute bottom-[6px] pl-2">
-                  <HttpsOutlinedIcon className="text-violet-700 text-[16px]" />
-                </i>
-              }
+              placeholder="Last Name"
+              className="pl-[8px] text-sm "
+            />
+          </div>
+          <div className="mb-2">
+            <TextField
+              variant="default"
+              placeholder="Email"
+              className="pl-[8px] text-sm "
+            />
+          </div>
+          <div className="mb-2">
+            <TextField
+              variant="default"
+              placeholder="Password"
+              className="pl-[8px] text-sm"
               postIcon={
                 <i className="absolute right-[6px] bottom-[6px] pl-2 cursor-pointer">
                   <RemoveRedEyeOutlinedIcon className="text-violet-700 text-[16px]" />
@@ -53,17 +55,20 @@ const Login = () => {
               }
             />
           </div>
-          <span className="text-purple-500 font-inter text-xs font-medium mb-6 block cursor-pointer">
-            Forgot Password?
-          </span>
+          <div className="mb-2">
+            <TextField
+              variant="default"
+              placeholder="Confirm password"
+              className="pl-[8px] text-sm"
+              postIcon={
+                <i className="absolute right-[6px] bottom-[6px] pl-2 cursor-pointer">
+                  <RemoveRedEyeOutlinedIcon className="text-violet-700 text-[16px]" />
+                </i>
+              }
+            />
+          </div>
 
-          <Checkbox
-            id="remember-me"
-            label="Remember me"
-            className="mb-2 text-sm"
-          />
-
-          <Button variant="primary" className="w-full mb-2 text-sm">
+          <Button variant="primary" className="w-full mb-2 mt-4 text-sm">
             <span>Continue</span>
           </Button>
           <div className="flex justify-center">
@@ -81,9 +86,9 @@ const Login = () => {
           </Button>
           <div className="text-sm">
             <span className="text-violet-800">
-              New User?
+              Already registered?
               <span className="text-purple-500 font-inter font-medium cursor-pointer ml-2">
-                Register
+                Login
               </span>
             </span>
           </div>
@@ -93,4 +98,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
