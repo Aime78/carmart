@@ -8,7 +8,7 @@ async function dbConnect() {
   }
   console.log('in the connection');
   // @ts-ignore comment
-  const db = await mongoose.connect(process.env.MONGODB_URI as string || '', {
+  const db = await mongoose.connect(process.env.MONGODB_URI as string, {
     // useNewUrlParser: true,
     // useUnifiedTopology: true,
     dbName: 'carmart',
